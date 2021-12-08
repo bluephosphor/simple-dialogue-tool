@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <Button text="Open File" color="green" @btn-click="toggleOpenFileViewer" />
+  <Button text="Open File" theme="success" @btn-click="toggleOpenFileViewer" />
 
   <FilesViewer
     v-show="openFileViewer"

@@ -1,8 +1,8 @@
 <template>
     <button 
         @click="onClick()" 
-        :style="{ background: color }" 
-        class="btn btn-primary">{{ text }}
+        :class="`btn btn-outline-${theme} btn-small`">
+        {{ text }}
     </button>
 </template>
 
@@ -11,7 +11,7 @@ export default {
     name: 'Button',
     props: {
         text: String,
-        color: String
+        theme: String,
     },
     methods:{
         onClick(){

@@ -24,10 +24,10 @@ export default {
 </script>
 
 <template>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 40%">
         <img src="" class="card-img-top" alt="">
         <div class="card-body">
-            <h5 class="card-title">{{this.nodeData.id}}</h5>
+            <p class="card-title">id: {{this.nodeData.id}}</p>
             <div v-if="this.editing" class="form-group mt-4 mb-2">
                 <input
                     v-model="this.text"
@@ -36,7 +36,7 @@ export default {
                 />
             </div>
             <p v-else class="card-text">{{this.text}}</p>
-            <Button text="Edit" color="blue" @click="toggleEdit" />
+            <Button :text="this.editing ? 'Save' : 'Edit'" theme="primary" @click="toggleEdit" />
         </div>
     </div>
 </template>
