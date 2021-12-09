@@ -12,10 +12,8 @@ export default {
     toggleOpenFileViewer() {
       this.openFileViewer = !this.openFileViewer;
     },
-    loadExampleData() {
-      const p = "./exampledata.json";
-
-      fs.readFile(p, "utf8", (err, data) => {
+    loadExampleData(path) {
+      fs.readFile(path, "utf8", (err, data) => {
         if (err) return console.log(err);
         this.convoData = JSON.parse(data);
       });
@@ -32,7 +30,7 @@ export default {
 
 <template>
   <Button text="Open File" color="green" @btn-click="toggleOpenFileViewer" />
-  <Button text="Open Example Data" color="blue" @btn-click="loadExampleData" />
+  <Button text="Open Example Data" color="blue" @btn-click="loadExampleData('./exampledata.json')" />
 
   <FilesViewer v-show="openFileViewer" />
 

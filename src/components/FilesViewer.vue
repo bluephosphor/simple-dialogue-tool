@@ -119,6 +119,10 @@ export default {
 </template>
 
 <style scoped>
+*{
+    font-family: sans-serif;
+}
+
 .clickable {
   cursor: pointer;
 }
