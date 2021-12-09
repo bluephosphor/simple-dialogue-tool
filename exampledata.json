@@ -1,0 +1,72 @@
+{
+    "ROOT": [
+        {
+            "type": "line",
+            "text": "...",
+            "speaker": "...",
+            "event": null
+        },
+        {
+            "type": "line",
+            "text": "...",
+            "speaker": "...",
+            "event": null
+        },
+        {
+            "type": "question",
+            "text": "..?",
+            "speaker": "...",
+            "event": [
+                {
+                    "text": "..!",
+                    "target": "A"
+                },
+                {
+                    "text": "..!",
+                    "target": "B"
+                },
+                {
+                    "text": "..!",
+                    "target": "C"
+                }
+            ]
+        }
+    ],
+    "A": [
+        {
+            "type": "line",
+            "text": "A response",
+            "speaker": "...",
+            "event": null
+        },
+        {
+            "type": "line",
+            "text": "Something is happening.",
+            "speaker": "...",
+            "event": {
+                "type": "method",
+                "value": "scr_function",
+                "args": []
+            }
+        }
+    ],
+    "B": [
+        {
+            "type": "line",
+            "text": "B response, hehehe",
+            "speaker": "...",
+            "event": {
+                "type": "sound",
+                "value": "snd_laugh"
+            }
+        }
+    ],
+    "C": [
+        {
+            "type": "line",
+            "text": "C response",
+            "speaker": "...",
+            "event": null
+        }
+    ]
+}

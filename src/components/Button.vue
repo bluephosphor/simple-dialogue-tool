@@ -1,7 +1,8 @@
 <template>
     <button 
         @click="onClick()" 
-        :class="`btn btn-outline-${theme} btn-small`">
+        :style="`background: ${color}`"
+        class="btn">
         {{ text }}
     </button>
 </template>
@@ -11,7 +12,7 @@ export default {
     name: 'Button',
     props: {
         text: String,
-        theme: String,
+        color: String,
     },
     methods:{
         onClick(){
@@ -20,3 +21,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .btn{
+        color: white;
+        background: black;
+        border: 1px solid white;
+        border-radius: 4px;
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
+</style>
